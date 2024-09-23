@@ -10,6 +10,9 @@
   transform-origin: center;*/
 
   position: relative; /* El elemento se mueve desde su posición original, pero sigue ocupando su espacio normal, por lo que afecta la posición de los demás elementos. */
+  display: flex; /* Activamos flexbox */
+  flex-direction: column; /* Alineamos los elementos en una columna */
+  align-items: center; /* Centramos los elementos horizontalmente */
 }
 
 .Credenciales-contenedor {
@@ -20,10 +23,8 @@
   z-index: 2;
   box-shadow: 25px 30px 4px #000000;
   position: absolute;
-
   display: flex; /* Activamos flexbox */
-  flex-direction: column; /* Alineamos los elementos en una columna */
-  align-items: center; /* Centramos los elementos horizontalmente */
+  align-items: center; /* Centramos los elementos horizontalmente*/
 }
 .circulo-derecha-alto{
 
@@ -122,9 +123,8 @@
 
 
 .titulo{
-  font-weight: bolder;
+  font-weight: 850;
   top: 12%;
-  position: absolute;
 }
 
 .ingreso-credenciales {
@@ -132,13 +132,15 @@
   color: #808080;
   bottom: 44%;
   position: absolute;
-
 }
+
 /*bolder con font-size de 12*/
 .olvidaste{
   padding: 20%;
   font-size: 10px;
+  right: 5%;
+  bottom: 28%;
+  text-decoration: none; /* Quitar el subrayado */
+  color: inherit; /* Usar el color del elemento padre */
   position: absolute;
-  bottom: 38%;
-
 }
