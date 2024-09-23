@@ -1,0 +1,11 @@
+.ion-Fondo {                                          
+    --ion-background-color: #383535;       
+    }
+
+.ion-Fondo2{
+    --ion-background-color: rgb(255, 255, 255);// --background: #000; Antes // Esta variable esta mal escrita en
+    --ion-text-color: #000000;                 // --color: #9efff0;  Antes // IONIC ya que esta tiene otra definicion de variables un poco distinta a HTML como tal.                              
+
+}
+
+

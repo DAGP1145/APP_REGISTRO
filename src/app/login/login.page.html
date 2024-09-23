@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      login
+    </ion-title>
+  </ion-toolbar>
+<link href="login.page.scss" rel="stylesheet">
+  
+</ion-header>
+
+                                <!--Uso <ion-content> es esencial para que el contenido se ajuste y maneje correctamente en la pantalla. -->
+<ion-content class="ion-Fondo"> <!--Con <ion-content>, Ionic asegura que el contenido se ajuste y posicione adecuadamente en la pantalla, gestionando espaciado y desbordamiento. -->
+                                <!-- Por lo tanto, <ion-content> actúa como un contenedor que maneja el desbordamiento, el desplazamiento y el ajuste del contenido en la pantalla.--> 
+
+   <ion-card class="ion-Fondo2"> <!--Sin <ion-content>, el contenido puede no posicionarse correctamente y puede quedar pegado al borde de la pantalla.-->
+    <div>
+      <form [formGroup] = "usuario"> <!--agrego [formGroup] = "usuario"-->
+        <ion-item> <!--Estiliza, creando una fila. si hay de un elemento lo agrega a la lista-->
+          <ion-input label="Correo electrónico" label-placement="stacked" placeholder="Ingrese su Correo"></ion-input> <!--label-placement="stacked" hace el efecto stack-->
+        </ion-item>
+        <ion-item>
+          <ion-input label="Contraseña"Contraseña label-placement="stacked" placeholder="Ingrese su Contraseña"></ion-input>
+        </ion-item>
+        <ion-button type="button">Click me!</ion-button>
+      </form>
+    </div>
+   
+  
+    <!-- El ion-label por si solo hace 'wrap' por lo tanto los elementos se van a ver 
+     organizados. Por otro lado, si usaramos la clase 'class="ion-text-nowrap";' los
+     elementos se organizaran en una sola fila hasta más alla del extremo de la pantalla -->
+    <!--<ion-item>
+      <ion-label class="ion-text-nowrap" >
+        Multi-line text that should wrap when it is too long to fit on one line. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit.
+      </ion-label>
+    </ion-item>-->
+  
+  
+  </ion-card>
+</ion-content>
+
+
+
+

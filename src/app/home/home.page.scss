@@ -1,27 +1,144 @@
-#container {
-  text-align: center;
+.contenedor-principal {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #383535;
+  
+  /* Escalado para reducir el tamaño */
 
+  /* transform: scale(0.7); Puedes ajustar este valor a lo que necesites 
+  transform-origin: center;*/
+
+  position: relative; /* El elemento se mueve desde su posición original, pero sigue ocupando su espacio normal, por lo que afecta la posición de los demás elementos. */
+}
+
+.Credenciales-contenedor {
+  width: 250px;
+  height: 430px;
+  background-color: #fff;
+  border-radius: 20px ;
+  z-index: 2;
+  box-shadow: 25px 30px 4px #000000;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
+  display: flex; /* Activamos flexbox */
+  flex-direction: column; /* Alineamos los elementos en una columna */
+  align-items: center; /* Centramos los elementos horizontalmente */
+}
+.circulo-derecha-alto{
+
+   width: 301px;    
+   height: 272px;    
+   background-color: #D7A40D; 
+   clip-path: circle(44.4% at 74% 0%);
+   right: 0%; 
+   top: 0%;
+   position: absolute;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.circulo-derecha{
+  /* forma y tamaño del circulo*/
+  width: 322px;      /* Ancho del círculo */
+  height: 464px;     /* Alto del círculo */
+  background-color: #D7A40D; /* Color del círculo */
+/*clip-path: circle(<radio> at <posX> <posY>);*/
+  clip-path: circle(30.1% at 74% 99%);
+  right: 0%;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.circulo-izquierda{
+  background-color: #ffee03e4; 
+  left: 0%; 
+  width: 320px; 
+  height: 232px;
+  clip-path: circle(40.4% at 31% 110%);}
 
-  color: #8c8c8c;
+.circulo-medio-bajo{
+  background-color: #D7A40D;
+  z-index: 1; /* Detrás */
+  width: 261px ;
+  height: 232px;
+  clip-path: circle(44.4% at 100% 51%);
 
-  margin: 0;
+  bottom: 23%;
+  right: 0%;
+  position: absolute;
 }
 
-#container a {
-  text-decoration: none;
+/*.circulo-medio-alto{
+  background-color: #ffee03e4;
+  z-index: 1;
+  width: 261px ;
+  height: 232px;
+  clip-path: circle(44.4% at 0% 50%);
+  position: absolute;
+  left: 0%;
+  top: 25%;
+}*/
+
+.circulo-medio-alto {
+  background-color: #ffee03e4;
+  z-index: 1;
+  width: 65vw; /* Unidades relativas al ancho */
+  height: 65vh; /* Unidades relativas al alto para evitar distorsión */
+  clip-path: circle(30% at 50% 50%);
+  position: absolute;
+  left: -40%;
+  top: 7vh;
+}
+
+
+.circulo{
+  /* orientación*/
+  position: absolute;/* Mueve el elemento en relación con el contenedor más cercano */
+ /*  top: 100px; Desde la parte superior del contenedor */
+ /*  left: 100px; Desde la izquierda del contenedor */
+  bottom: 0%;
+}
+
+
+
+
+.boton-login{
+ height: 23px;
+ width: 175px;
+ font-size: 60%;
+ font-weight:bolder;
+ color: #ffffff;
+ text-align: center;
+ border-radius: 5px;
+ background-color: #000000;
+ bottom: 32%;
+ position: absolute;
+
+}
+
+.carac-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.titulo{
+  font-weight: bolder;
+  top: 12%;
+  position: absolute;
+}
+
+.ingreso-credenciales {
+  font-weight: bolder;
+  color: #808080;
+  bottom: 44%;
+  position: absolute;
+
+}
+/*bolder con font-size de 12*/
+.olvidaste{
+  padding: 20%;
+  font-size: 10px;
+  position: absolute;
+  bottom: 38%;
+
 }
