@@ -3,29 +3,13 @@
   height: 100%;
   margin: 0 auto;
   background-color: #383535;
-  
-  /* Escalado para reducir el tamaño */
 
-  /* transform: scale(0.7); Puedes ajustar este valor a lo que necesites 
-  transform-origin: center;*/
 
   position: relative; /* El elemento se mueve desde su posición original, pero sigue ocupando su espacio normal, por lo que afecta la posición de los demás elementos. */
   display: flex; /* Activamos flexbox */
-  flex-direction: column; /* Alineamos los elementos en una columna */
   align-items: center; /* Centramos los elementos horizontalmente */
 }
 
-.Credenciales-contenedor {
-  width: 250px;
-  height: 430px;
-  background-color: #fff;
-  border-radius: 20px ;
-  z-index: 2;
-  box-shadow: 25px 30px 4px #000000;
-  position: absolute;
-  display: flex; /* Activamos flexbox */
-  align-items: center; /* Centramos los elementos horizontalmente*/
-}
 .circulo-derecha-alto{
 
    width: 301px;    
@@ -66,39 +50,57 @@
   position: absolute;
 }
 
-/*.circulo-medio-alto{
-  background-color: #ffee03e4;
-  z-index: 1;
-  width: 261px ;
-  height: 232px;
-  clip-path: circle(44.4% at 0% 50%);
-  position: absolute;
-  left: 0%;
-  top: 25%;
-}*/
 
 .circulo-medio-alto {
   background-color: #ffee03e4;
   z-index: 1;
   width: 65vw; /* Unidades relativas al ancho */
   height: 65vh; /* Unidades relativas al alto para evitar distorsión */
-  clip-path: circle(30% at 50% 50%);
+  clip-path: circle(30% at 0% 50%);
   position: absolute;
-  left: -40%;
-  top: 7vh;
-}
+  left: 0%;
+  top: 8%;
 
+
+}
 
 .circulo{
-  /* orientación*/
-  position: absolute;/* Mueve el elemento en relación con el contenedor más cercano */
- /*  top: 100px; Desde la parte superior del contenedor */
- /*  left: 100px; Desde la izquierda del contenedor */
-  bottom: 0%;
+/* orientación*/
+position: absolute;/* Mueve el elemento en relación con el contenedor más cercano */
+/*  top: 100px; Desde la parte superior del contenedor */
+/*  left: 100px; Desde la izquierda del contenedor */
+bottom: 0%;
 }
 
 
 
+
+
+
+.Credenciales-contenedor {
+  width: auto;
+  height: 60%;
+  padding: 6%;
+  border: 1px solid #000000;
+  border-radius: 20px ;
+  z-index: 2;
+  box-shadow: 25px 30px 4px #000000;
+  background-color: #fff;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column; /* Organización vertical */
+  justify-content: space-around; /* Distribuye los elementos verticalmente */
+
+
+}
+
+.Credenciales-subcontenedor{
+  width: 173px;
+  height: 221px;
+  margin-top: -90px;
+}  
 
 .boton-login{
  height: 23px;
@@ -109,8 +111,9 @@
  text-align: center;
  border-radius: 5px;
  background-color: #000000;
- bottom: 32%;
- position: absolute;
+ 
+ margin-top: 5%;
+
 
 }
 
@@ -120,27 +123,36 @@
   justify-content: center;
 }
 
-
-
-.titulo{
+.titulo {
   font-weight: 850;
-  top: 12%;
+  text-align: center; /* Centrar texto */
 }
 
 .ingreso-credenciales {
+  margin-top: 10%;
+  font-size: 12.5px;
   font-weight: bolder;
   color: #808080;
-  bottom: 44%;
-  position: absolute;
 }
 
 /*bolder con font-size de 12*/
 .olvidaste{
-  padding: 20%;
-  font-size: 10px;
-  right: 5%;
-  bottom: 28%;
+  display: block;
+  font-size: 63%;
+  font-weight: 850;
+  color: #808080;
   text-decoration: none; /* Quitar el subrayado */
-  color: inherit; /* Usar el color del elemento padre */
-  position: absolute;
+  /* color: inherit; Usar el color del elemento padre */
+  margin-left: 31%;
+
+  padding-top: 2.5%;
 }
+
+ion-item {
+  --border-color: #000;
+ /*  border-bottom: 2px solid #808080; Cambia el grosor y color de la línea inferior */
+  --padding-start: 0px; /* Elimina el padding del lado izquierdo */
+  --padding-end: 0px; /* Elimina el padding del lado derecho */
+  --inner-padding: 10px; /* Reduce el padding interno, lo que acerca la línea al input */
+}
+

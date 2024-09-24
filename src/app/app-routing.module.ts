@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -8,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',   /* donde se empieza */ 
+    redirectTo: 'home',   /* donde se empieza */ 
     pathMatch: 'full'
   },
 
@@ -24,4 +25,9 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private router: Router){}
+  navigate(){
+    this.router.navigate(['/login'])//esto no se hace aquí
+  }
+ }

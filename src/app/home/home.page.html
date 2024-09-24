@@ -8,13 +8,23 @@
         <h1 class="">APP</h1>
       </div>
       <div class="Credenciales-contenedor">
-        <h1 class="titulo">Inicia Sesión</h1>
-        <input class="ingreso-credenciales" type="text">
-        <input  class="ingreso-credenciales" type="text">
-        <div style="right: 0%;">
-          <a class="olvidaste" href="">¿Olvidaste la contraseña?</a>          
-        </div>
-        <button class=" boton-login" color="dark">INGRESAR</button>
+        <div class="Credenciales-subcontenedor"> 
+          <h1 class="titulo">Inicia Sesión</h1>
+          <ion-list>
+            <ion-item>            
+              <ion-input class="ingreso-credenciales" type="text" placeholder="Enter your Email"></ion-input>
+            </ion-item>
+            <ion-item>            
+              <ion-input class="ingreso-credenciales" type="text" placeholder="Password"></ion-input>
+            </ion-item>
+          </ion-list>
+            <a class="olvidaste" href="">¿Olvidaste la contraseña?</a>          
+          <div style="display: flex; justify-content: center;">
+            <button class=" boton-login" color="dark" [routerLink]="['/login']">INGRESAR</button>
+          </div> 
+
+        </div>    
+
       </div>
       <div class="circulo-derecha-alto"></div>
       <div class="circulo circulo-derecha"></div>
