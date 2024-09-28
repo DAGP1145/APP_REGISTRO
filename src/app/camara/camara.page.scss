@@ -1,0 +1,193 @@
+/*.contenedor-principal {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #383535;
+    position: absolute;
+  }
+
+  .carac-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+  }
+
+
+  .bton-regreso{
+    height: 35px;
+    width: 100px;
+    font-size: 70%;
+    font-weight:bolder;
+    --color: #000;
+    --border-radius: 5px;
+    --background: #FFC003;
+    --background-activated-opacity: #000;
+    margin-top: 5%; 
+    margin-bottom: 10%;
+    z-index: 10;
+  }
+
+  .ion-icon-regresar{
+    margin-left: 2%;
+    font-size: 170%;
+    color: #000;
+  }
+
+  .main-container { Contenedor principal del QR SCAN ME
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 66%;
+    background-color: #FFC003;
+    border-radius: 10px;
+  }
+  
+  .image {
+    padding: 2%;
+    margin-top: 1%;
+  }
+  
+  .text-container { Contenedor del SCAN ME
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .scan-text {
+    font-weight: bolder;
+    font-size: 14vw;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+  }
+  
+  .me-text {
+    font-weight: bolder;
+    font-size: 30vw;
+    margin: 0;
+    margin-bottom: 10%;
+    line-height: 0.8;
+  }
+  
+  ion-tab-bar {
+    height: 12.5%;
+    --border: none;
+  }
+  
+  .tab-yellow {Contenedor de Asignaturas
+    background-color: #FFEE03;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tab-orange {  Contenedor de Cámara
+    background-color: #FFC003;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tab-library, .tab-search {  color de fuente y selección, Asignaturas y Cámara
+    --color-selected: #000;
+    --color: #000;
+    font-weight: bolder;
+  }
+  
+  */
+
+  .contenedor-principal {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #383535;
+    position: absolute;
+}
+
+.carac-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bton-regreso {
+    height: 35px;
+    width: 100px;
+    font-size: 70%;
+    font-weight: bolder;
+    --color: #000;
+    --border-radius: 5px;
+    --background: #FFC003;
+    --background-activated-opacity: #000;
+    /* Simplifica el margen superior e inferior */
+    margin: 5% 0 10% 0; 
+    z-index: 10;
+}
+
+.ion-icon-regresar {
+    margin-left: 2%;
+    font-size: 170%;
+    color: #000;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 66%;
+    background-color: #FFC003;
+    border-radius: 10px;
+}
+
+.image {
+    padding: 2%;
+    margin-top: 1%;
+}
+
+.text-container {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+/* Agrupación de .scan-text y .me-text para evitar duplicación de estilos comunes */
+.scan-text, .me-text {
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+
+.scan-text {
+    font-size: 14vw;
+}
+
+.me-text {
+    font-size: 30vw;
+    margin-bottom: 10%;
+}
+
+ion-tab-bar {
+    height: 12.5%;
+    --border: none;
+}
+
+/* Eliminación de reglas repetitivas para las tabs */
+.tab-yellow, .tab-orange {
+    width: 100%;
+    height: 100%;
+}
+
+.tab-yellow {
+    background-color: #FFEE03;
+}
+
+.tab-orange {
+    background-color: #FFC003;
+}
+
+.tab-library, .tab-search {
+    --color-selected: #000;
+    --color: #000;
+    font-weight: bolder;
+}

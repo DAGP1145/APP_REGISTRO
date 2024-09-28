@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-content>
+    <div class="carac-flex contenedor-principal" >
+
+      <div class=" main-container" >
+        <ion-img
+          class="image"
+          src="assets/img/Untitled design (1).png"
+          alt="The Wisconsin State Capitol building in Madison, WI at night">         
+        </ion-img>         
+    
+        <div class="text-container">
+          <h1 class="scan-text">SCAN</h1>
+          <h1 class="me-text">ME!</h1>
+        </div>
+      </div>
+
+      
+      <ion-button class="bton-regreso" [routerLink]="['/login']"> 
+        REGRESAR <ion-icon class="ion-icon-regresar" name="chevron-back-circle-outline"></ion-icon>
+      </ion-button>        
+
+
+    </div>
+
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <div class="tab-yellow">        
+            <ion-tab-button [routerLink]="['/login']" tab="library" class="tab-library">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              ASIGNATURAS
+            </ion-tab-button>
+          </div>
+          <div class="tab-orange">
+            <ion-tab-button [routerLink]="['/camara']" tab="search" class="tab-search">
+              <ion-icon name="search"></ion-icon>
+              CÁMARA
+            </ion-tab-button>          
+          </div>
+        </ion-tab-bar>
+      </ion-tabs>
+    
+  </ion-content> 
+</ion-app>
+
