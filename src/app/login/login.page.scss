@@ -1,11 +1,58 @@
-.ion-Fondo {                                          
-    --ion-background-color: #383535;       
-    }
+.contenedor-principal {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #383535;
+    position: relative; /* El elemento se mueve desde su posición original, pero sigue ocupando su espacio normal, por lo que afecta la posición de los demás elementos. */
 
-.ion-Fondo2{
-    --ion-background-color: rgb(255, 255, 255);// --background: #000; Antes // Esta variable esta mal escrita en
-    --ion-text-color: #000000;                 // --color: #9efff0;  Antes // IONIC ya que esta tiene otra definicion de variables un poco distinta a HTML como tal.                              
+  }
 
+  .Mar-tar {
+    margin-top: 4.5%; /* O ajusta al valor que prefieras */
 }
+
+  .carac-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineamiento del contenedor principal*/
+  }
+
+  ion-card {
+    width: 282px;
+    height: 59px;
+    display: flex;
+    align-items: center; /* formato dentro del card*/
+  }
+
+  ion-card-header{
+    width: 100%;
+  }
+  
+  ion-card-header span {
+    width: 50%;
+    font-size: 10px; /* Tamaño de los elementos dentro del card*/
+  }
+  
+  ion-card-header span:first-child {
+    font-weight: 850;
+    color: #000; /* Asignatura*/
+  }
+  
+  ion-card-header span:last-child {
+    color: #0A253E;
+    font-weight: 900; /* porcentaje*/
+    text-align: right;
+  }
+
+  .form-span{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+  }
+  
+
+
 
 
