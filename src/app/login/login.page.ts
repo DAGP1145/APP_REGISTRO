@@ -9,26 +9,22 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor() { }
 
-  navigate(){
-    this.router.navigate(['/home']);
+   cards = [
+    { title: 'ARQUITECTURA', content: 'Este es el contenido desplegado del ion-card 1', isExpanded: false },
+    { title: 'CALIDAD DE SOFTWARE', content: 'Este es el contenido desplegado del ion-card 2', isExpanded: false },
+    { title: 'DISEÑO DE PROTOTIPOS', content: 'Este es el contenido desplegado del ion-card 3', isExpanded: false },
+    { title: 'ESTADISTICA DESCRIPTIVA', content: 'Este es el contenido desplegado del ion-card 4', isExpanded: false },
+    { title: 'ETICA PARA EL TRABAJO', content: 'Este es el contenido desplegado del ion-card 5', isExpanded: false },
+    { title: 'INGLES INTERMEDIO', content: 'Este es el contenido desplegado del ion-card 6', isExpanded: false },
+    { title: 'PROCESO DE PORTAFOLIO', content: 'Este es el contenido desplegado del ion-card 7', isExpanded: false },
+    { title: 'PROGRAMACIÓN DE APLICACIONES MOVILES', content: 'Este es el contenido desplegado del ion-card 8', isExpanded: false }
+  ];
+  
+  toggleCard(index: number) {
+    this.cards[index].isExpanded = !this.cards[index].isExpanded;
   }
-
-  usuario = new FormGroup({
-    user: new FormControl('',[Validators.required, Validators.minLength(4),Validators.maxLength(20)]),
-    pass: new FormControl('',[Validators.required, Validators.minLength(4),Validators.maxLength(20)]),
-   });
-
-   navegarExtras(){
-    let setData: NavigationExtras = {
-     state: {
-      id: this.usuario.value.user,
-      user: this.usuario.value.pass
-     }
-    };
-    this.router.navigate(['/home'],setData);
-   }
 
   ngOnInit() {
   }
