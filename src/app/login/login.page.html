@@ -38,99 +38,54 @@
 
       <div>
 
-        <ion-card style="margin-top: 8%;">
-          <ion-card-header>
-            <div class="form-span">
-            <span>ARQUITECTURA</span>              
-            <span>100%</span>              
-            </div>
+<!--
+        <ion-card *ngFor="let card of cards; let i = index" class="ion-card-prueba" (click)="toggleCard(i)" [ngClass]="{'expanded': card.isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+            <p class="formato">{{ card.title }}
+              <ion-icon class="ion-icon" [name]="card.isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+            </p>
           </ion-card-header>
+          <ion-card-content *ngIf="card.isExpanded">
+            <p>{{ card.content }}</p>
+          </ion-card-content>
         </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>CALIDAD DE SOFTWARE</span>              
-            <span>50%</span>              
+      -->
+        <ion-card *ngFor="let card of cards; let i = index" class="ion-card-prueba" (click)="toggleCard(i)" [ngClass]="{'expanded': card.isExpanded}" style="z-index: 1;" >
+          <ion-card-header class="formato2">
+            <div class="formato">
+            <p>{{ card.title }} </p>
+            <p class="icon">100%</p>              
             </div>
+            
           </ion-card-header>
+          <ion-card-content *ngIf="card.isExpanded">
+            <p>{{ card.content }}</p>
+          </ion-card-content>
         </ion-card>
  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>DISEÑO DE PROTOTIPOS</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>ESTADISTICA DESCRIPTIVA</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>ETICA PARA EL TRABAJO</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>INGLES INTERMEDIO</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>PROCESO DE PORTAFOLIO</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
-  
-        <ion-card class="Mar-tar">
-          <ion-card-header>
-            <div class="form-span">
-            <span>PROGRAMACIÓN DE APLICACIONES MOVILES</span>
-            <span>100%</span>              
-            </div>
-          </ion-card-header>
-        </ion-card>
+
       </div>
 
-      <ion-tabs>
-        <ion-tab-bar style="height: 12.5%; --border: none;" slot="bottom">
-          <div style="background-color: #FFEE03; width: 100%; height: 100%;">        
-            <ion-tab-button style="--color-selected: #000; --color: #000; font-weight: 900" tab="library" class="tab-library">
-              <ion-icon name="bar-chart-outline"></ion-icon>
-              ASIGNATURAS
-            </ion-tab-button>
-
-          </div>
-          <div style="background-color: #FFC003; width: 100%; height: 100%;">
-          <ion-tab-button  [routerLink]="['/camara']" style="--color-selected: #000; --color:#000; font-weight: 850;" tab="search" class="tab-search">
-            <ion-icon name="search"></ion-icon>
-            CÁMARA
-          </ion-tab-button>          
-          </div>
-
-        </ion-tab-bar>
-      </ion-tabs>
     </div>
   </ion-content>
+  
+  <ion-tab-bar style="height: 12.5%; --border: none;" slot="bottom">
+    
+    <div style="background-color: #FFEE03; width: 100%; height: 100%;">        
+      <ion-tab-button style="--color-selected: #000; --color: #000; font-weight: 900" tab="library" class="tab-library">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        ASIGNATURAS
+      </ion-tab-button>
+
+    </div>
+    <div style="background-color: #FFC003; width: 100%; height: 100%;">
+    <ion-tab-button  [routerLink]="['/camara']" style="--color-selected: #000; --color:#000; font-weight: 850;" tab="search" class="tab-search">
+      <ion-icon name="search"></ion-icon>
+      CÁMARA
+    </ion-tab-button>          
+    </div>
+
+  </ion-tab-bar>
 </ion-app>
 
 

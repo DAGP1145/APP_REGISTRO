@@ -3,7 +3,7 @@
     height: 100%;
     margin: 0 auto;
     background-color: #383535;
-    position: relative; /* El elemento se mueve desde su posición original, pero sigue ocupando su espacio normal, por lo que afecta la posición de los demás elementos. */
+    overflow: scroll;
 
   }
 
@@ -19,37 +19,45 @@
 
   ion-card {
     width: 282px;
-    height: 59px;
-    display: flex;
-    align-items: center; /* formato dentro del card*/
-  }
-
-  ion-card-header{
-    width: 100%;
-  }
-  
-  ion-card-header span {
-    width: 50%;
-    font-size: 10px; /* Tamaño de los elementos dentro del card*/
-  }
-  
-  ion-card-header span:first-child {
+    height: 60px;
+    font-size: 12px;
     font-weight: 850;
-    color: #000; /* Asignatura*/
+  }
+
+  ion-card .formato{
+    color: #000;
+  }
+  ion-card .formato>.ion-icon{
+    font-size: 20px;
+  }
+
+  .formato{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  .formato2{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .ion-card-prueba {
+    transition: height 0.3s ease-in-out;
+    overflow: hidden; /* Asegura que el contenido se oculte cuando está contraído */
+    height: 60x; /* Altura inicial del ion-card */
   }
   
-  ion-card-header span:last-child {
-    color: #0A253E;
-    font-weight: 900; /* porcentaje*/
-    text-align: right;
+  .ion-card-prueba.expanded {
+    height: 150px; /* Altura cuando el ion-card está expandido */
   }
 
-  .form-span{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-
+  .icon{
+    display: inline;
+    color:#000;
   }
   
 

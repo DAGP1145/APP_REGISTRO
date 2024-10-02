@@ -1,0 +1,122 @@
+<ion-app>
+  <ion-content>
+    <div class="carac-flex contenedor-principal">
+
+      <div>
+
+        <ion-card *ngFor="let card of cards; let i = index" class="ion-card-prueba" (click)="toggleCard(i)" [ngClass]="{'expanded': card.isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+            <p class="formato">{{ card.title }}
+              <ion-icon class="ion-icon" [name]="card.isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+            </p>
+          </ion-card-header>
+          <ion-card-content *ngIf="card.isExpanded">
+            <p>{{ card.content }}</p>
+          </ion-card-content>
+        </ion-card>
+
+<!--
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">CALIDAD DE SOFTWARE
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+ 
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">DISEÑO DE PROTOTIPOS
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">ESTADISTICA DESCRIPTIVA
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">ETICA PARA EL TRABAJO
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">INGLES INTERMEDIO
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">PROCESO DE PORTAFOLIO
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card class="ion-card-prueba" (click)="toggleCard()" [ngClass]="{'expanded': isExpanded}" style="z-index: 1;">
+          <ion-card-header class="formato2">
+              <p class="formato">PROGRAMACIÓN DE APLICACIONES MOVILES
+                <ion-icon class="ion-icon" [name]="isExpanded ? 'chevron-up-circle-outline' : 'chevron-down-circle-outline'"></ion-icon>
+              </p>         
+          </ion-card-header>
+          <ion-card-content *ngIf="isExpanded">
+            <p>Este es el contenido desplegado del ion-card.</p>
+          </ion-card-content>
+        </ion-card>
+      -->
+      </div>
+
+    </div>
+  </ion-content>
+
+
+    <ion-tab-bar style="height: 12.5%; --border: none;" slot="bottom">
+      
+      <div style="background-color: #FFEE03; width: 100%; height: 100%;">        
+        <ion-tab-button [routerLink]="['/loginprofe']" style="--color-selected: #000; --color: #000; font-weight: 900">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+          ASIGNATURAS
+        </ion-tab-button>
+      </div>
+
+      <div style="background-color: #FFC003; width: 100%; height: 100%;">
+      <ion-tab-button  [routerLink]="['/camara']" style="--color-selected: #000; --color:#000; font-weight: 850;" >
+        <ion-icon name="search"></ion-icon>
+        CÁMARA
+      </ion-tab-button> 
+
+      </div>
+    </ion-tab-bar>
+
+  
+</ion-app>
+
